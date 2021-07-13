@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"></script>
+
+            <style>
+                 .form-select{
+                        width: 150px;
+                    }
+                #cbxs{
+                    width:200px;
+                }
+                #base{
+                    background: rgb(215, 226, 149);
+                    border-radius: 10px;
+                    border: 2px solid #888;
+                }
+            </style>
+               
+                
+        
+        
+    </head>
+    <body>
+        <div class="container center" id="base" align="center">
+            <h1 class="h1">This is a Password Generator</h1>
+            <br>
+            <h6 class="h6">Select the length of the Password</h6>
+            <p></p>
+            <form action=" {% url 'password' %}">
+                <select class="form-select" aria-label="Default select example" name="length">
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12" selected="selected">12</option>
+                    <option value="13">13</option>
+                    <option value="14">14</option>
+                    <option value="15">15</option>
+                    <option value="16">16</option>
+                </select>
+                <div class="container" id="cbxs" align="left">
+                    <br>
+                    <input class="form-check-input" type="checkbox" name="uppercase">
+                    <label class="form-check-label" for="flexCheckDefault">
+                        Uppercase
+                    </label>
+                    <br>
+                    <input class="form-check-input" type="checkbox" name="numbers">
+                    <label class="form-check-label" for="flexCheckDefault">
+                        Numbers
+                    </label>
+                    <br>
+                    <input class="form-check-input" type="checkbox" name="special">
+                    <label class="form-check-label" for="flexCheckDefault">
+                        Special Characters
+                    </label>
+                </div>
+                    
+                
+                <p></p>
+                <input type="submit" class="btn btn-secondary" value="Generate Password">
+                <p></p>
+
+                
+            </form>
+        <div  align="right"> <a href="{% url 'about' %}"> About </a></div>
+        </div>
+        
+
+    </body>
+</html>
+ 

@@ -1,0 +1,68 @@
+<html>
+
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <style>
+        #cont {
+            background: rgb(215, 226, 149);
+            border-radius: 10px;
+            border: 2px solid #888;
+        }
+
+        .form-control {
+            background: rgb(95, 95, 95);
+            color: white;
+        }
+
+        .input-group.mb-3 {
+            width: 350px;
+        }
+
+        #list{
+           width: 500px; 
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <div class="container text-center" id="cont">
+        <h1>What is this page?</h1>
+        <br>
+
+        <h4>About the functionality:</h4>
+        
+        <p>
+            This page was made as a challenge in my path to learning Django.<br>
+            You can select some parameters for the page to generate a new random password:<br>
+        </p>
+       <ul align="left" id="list">
+           <li><b>Upper:</b> to integrate the Uppercase letters</li>
+            <li><b>Special Characters:</b> to integrate the punctuation and simbols</li>
+            <li><b>Numbers:</b> to integrate the numeric simbols</li>
+       </ul>
+
+        <h4>About the author:</h4>
+        
+        <p>
+            Nils is a junior programmer trying to make a living from the thisngs he loves to do<br>
+            You can check some of his projects on his <a href="https://www.linkedin.com/in/nils-vargas-berzina-2b9336112/">Linkedin Page</a> <br>
+        </p>
+        <a href="{% url 'home' %}"><button type="button" class="btn btn-warning">Go Back!</button></a>
+        <p></p>
+
+
+
+    </div>
+
+
+
+</body>
+
+</html>
